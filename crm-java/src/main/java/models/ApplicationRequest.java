@@ -22,7 +22,7 @@ public class ApplicationRequest {
     @Column(name = "course_name")
     private String courseName;
 
-    @Column(name = "commentary",columnDefinition = "TEXT")
+    @Column(name = "commentary")
     private String commentary;
 
     @Column(name = "phone")
