@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th =  "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="mainLayout.html">
+<div layout:fragment="siteContent">
+    <div class="container mt-5">
+        <div class="row row-cols-4 g-4">
+            <div  class="col  m-2 w-50 mx-auto">
+                <form action="/add_app" method="post">
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Full Name:</strong></label>
+                        <input type="text" class="form-control" placeholder="Ф.И.О"
+                               name="userName" required>
+                    </div>
+                    <div class="mb-3"><label class="form-label"><strong>Course:</strong></label>
+                        <select class="form-control" placeholder="Choose Course"
+                                name="courseName" required>
+                            <option>Introduction to Programming</option>
+                            <option>Object Oriented Programming</option>
+                            <option>Python programming</option>
+                            <option>Discrete Mathematics</option>
+                            <option>Web Technologies</option>
+                            <option>Algorithms and Data Structures</option>
+                        </select>
+                    </div>
+                    <div class="mb-3"><label class="form-label"><strong>Phone:</strong></label>
+                        <input type="text" class="form-control"
+                               placeholder="Введите номер телефона"
+                               name="phone" required>
+                    </div>
+                    <div class="mb-3"><label class="form-label"><strong>Comments:</strong></label>
+                        <textarea class="form-control" rows="5"
+                                  placeholder="Комментарии" name="commentary" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
